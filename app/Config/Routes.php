@@ -1,12 +1,24 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+namespace Config;
 
-/**
- * @var RouteCollection $routes
- */
+use CodeIgniter\Config\Services;
 
-$routes->get('/', 'Home::index');
-$routes->get('/about', 'Home::about');
-$routes->get('/customers', 'CustomerController::index');
-$routes->get('/users', 'UserController::index');
+$routes = Services::routes();
+
+if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
+    require SYSTEMPATH . 'Config/Routes.php';
+}
+
+$routes->setDefaultNamespace('App\Controllers');
+$routes->setDefaultController('TasksController');
+$routes->setDefaultMethod('index');
+$routes->setTranslateURIDashes(false);
+$routes->set404Override();
+$routes->setAutoRoute(false);
+
+// Tasks for Today Management System
+$routes->get('/', 'TasksController::index');
+$routes->get('tasks', 'TasksController::tasks');
+$routes->get('profile', 'TasksController::profile');
+$routes->get('about', 'TasksController::about');

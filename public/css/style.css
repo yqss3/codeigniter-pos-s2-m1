@@ -1,0 +1,147 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f6fb;
+    color: #24334d;
+    line-height: 1.6;
+}
+
+/* Main headings */
+h1 {
+    color: #142746;
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+h2 {
+    color: #142746;
+    margin-top: 25px;
+}
+
+/* Navigation */
+nav {
+    background-color: #142746;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 24px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #36d6c0;
+}
+
+/* Horizontal separators */
+hr {
+    border: 0;
+    border-top: 1px solid #dce3ed;
+    margin: 22px 0;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(20, 39, 70, 0.08);
+}
+
+th {
+    background-color: #142746;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e5eaf1;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f0f8fa;
+}
+
+/* Task status labels */
+.status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status.pending {
+    background-color: #fff1cf;
+    color: #805900;
+}
+
+.status.completed {
+    background-color: #d8f6ed;
+    color: #08785f;
+}
+
+/* Content cards */
+.card {
+    background-color: #ffffff;
+    padding: 24px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(20, 39, 70, 0.08);
+    max-width: 1000px;
+}
+
+.card p {
+    margin: 12px 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 35px;
+    padding: 18px 0;
+    color: #718096;
+    border-top: 1px solid #dce3ed;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 12px 5px 0;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 9px 7px;
+    }
+}
